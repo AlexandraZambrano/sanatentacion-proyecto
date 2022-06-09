@@ -1,0 +1,794 @@
+/*carpeta sanatentacion cambiofooter-MAS ACTUALIZADO*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Inicio NavBar*/
+
+.nav {
+    height: 150px;
+    text-decoration: none;
+}
+
+.nav_logo {
+    width: 350px;
+    padding-left: 8%;
+}
+
+
+.nav_item {
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+
+.nav_item::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(53, 187, 53);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav_item:hover::after {
+    width: 100%;
+}
+
+.nav_container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_label,
+.nav_input {
+    display: none;
+}
+
+.nav_label {
+    display: block;
+    cursor: pointer;
+}
+
+.nav_menu {
+    position: fixed;
+    top: 80px;
+    min-height: 100vh;
+    width: 22%;
+    right: 0%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    position: absolute;
+    z-index: 100;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.nav_input:checked+.nav_menu {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+/*Fin navBar*/
+
+/*text-1*/
+p {
+    max-width: 75ch;
+}
+
+.landing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-box-1 {
+    width: 40%;
+    padding-left: 40px;
+    padding-bottom: 0%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.text-box-1 h1 {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: #34bd34;
+}
+
+.linea {
+    text-decoration: underline;
+}
+
+.text-box-1 p {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.btn-text-box-1 {
+    width: 50%;
+}
+
+/*
+  <a href="#carta" class="hero-btn">Carta</a>
+  <a href="" class="link-text-box-1">Reserva!</a>
+*/
+.carta-btn {
+    align-items: center;
+    display: flex;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #d0ddd7;
+    padding: 15px 80px;
+    font-size: 25px;
+    background: green;
+    position: relative;
+    cursor: pointer;
+}
+
+.carta-btn:hover {
+    border: 1px solid #7e846b;
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    transition: 1s;
+    color: white;
+    margin-top: 0.3125rem;
+    font-size: 1rem;
+    font-variant: bold;
+}
+
+/*fin de text-1*/
+
+/*Media Query 1*/
+
+@media (max-width: 600px) {
+    .nav_logo {
+        width: 200px;
+        padding-left: 0%;
+        text-align: center;
+    }
+
+    .nav_container {
+        display: flex;
+        height: 100%;
+        width: 90%;
+        margin: 0%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_container {
+        display: flex;
+        width: 100%;
+    }
+
+    .landing {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-box-1 {
+        width: 100%;
+        padding: 0%;
+    }
+
+    .text-box-1 p {
+        padding: 20px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+
+    .nav_menu {
+        background: white;
+        position: absolute;
+        z-index: 100;
+        width: 40%;
+    }
+
+    .text-box-1 h1 {
+        font-size: 30px;
+    }
+
+
+}
+
+/*media Query 1 Fin*/
+
+/*--inicio de cambio de fotos restaurante en movimiento--*/
+.slider {
+    width: 40%;
+    margin: 3%;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+/*--final de cambio de fotos restaurante en movimiento--*/
+
+/*Inicio Menu*/
+.menu {
+    width: 100%;
+    text-align: center;
+    padding-top: 55px;
+}
+
+.menu h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inicio-section {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: #34bd34;
+    padding-bottom: 5%;
+}
+
+.menu p {
+    padding-bottom: 5%;
+    padding-left: 22%;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.menu-col {
+    display: inline-block;
+    width: 25%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.menu-col img {
+    width: 100%;
+    display: block;
+}
+
+/*Media Query Col*/
+.mediaq-col {
+    width: 0%;
+    font-size: 0%;
+}
+
+/*Media Query col fin*/
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h4 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 20%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h4 {
+    bottom: 70%;
+    opacity: 1;
+}
+
+.layer p {
+    width: 90%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    bottom: 10%;
+    left: 40%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/*Media query text*/
+
+.media-query-text {
+    width: 0%;
+    font-size: 0%;
+}
+
+/*Media Query text*/
+
+.layer:hover p {
+    bottom: 30%;
+    opacity: 1;
+}
+
+/*Final del menú*/
+
+/*Media Query 2*/
+@media(max-width: 600px) {
+
+    .slider {
+        width: 0%;
+        margin: 0;
+    }
+
+    .inicio-section {
+        font-size: 30px;
+    }
+
+    .menu h3 {
+        font-size: 15px;
+        padding-bottom: 5%;
+    }
+
+    .row {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        padding: 5%;
+        justify-content: space-evenly;
+    }
+
+    .menu-col img {
+        width: 100%;
+        display: block;
+    }
+
+    .menu p {
+        padding: 0%;
+    }
+
+    .menu-col {
+        width: 35%;
+        margin: 2%;
+    }
+
+    .layer {
+        width: 0;
+        height: 0;
+    }
+
+    .media-query-text {
+        width: 100%;
+        font-weight: 500;
+        color: black;
+        font-size: 10px;
+        justify-content: center;
+    }
+
+    .mediaq-col {
+        display: inline-block;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+/*Media Query 2 Fin*/
+
+
+/*FOOTER*/
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+
+    color: black;
+    line-height: 1.5;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+.ft-title {
+    /*OK*/
+    color: #34bd34;
+    font-family: "Merriweather", serif;
+    font-size: 1.375rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    /* same as flex-grow: 1; */
+}
+
+.ft-main {
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem
+        /*200px*/
+    ;
+    padding: 0.800rem 3rem;
+    margin-top: 0.3125rem;
+}
+
+@media only screen and (min-width: 29.8125rem
+
+    /*477px*/
+) {
+    .ft-main {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 77.5rem
+
+    /*1240px*/
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="email"] {
+    border: 1px green solid;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+}
+
+input[type="submit"] {
+    background-color: #f55911;
+    color: #34bd34;
+    cursor: pointer;
+    border: 1px green solid;
+    padding: 0.625rem 3rem;
+    margin-top: 0.3125rem;
+    font-size: 1.10rem;
+    font-variant: bold;
+}
+
+/*OK*/
+.ft-social {
+    padding: 0 1.875rem 1.25rem;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px green solid;
+    padding-bottom: 1.25rem;
+}
+
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/*OK*/
+.ft-legal {
+    padding: 15px 10px;
+    text-align: center;
+    color: #34bd34;
+    font-size: 20px;
+}
+
+/*FIN FOOTER*/
+/*
+INICIO BOTON PERMANENTE DE LLAMADA
+*/
+.btn-wsp img {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-wsp {
+    position: fixed;
+    right: 10px;
+    padding: 5px;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+    }
+}
+
+/*Contacto*/
+h1 {
+    color: green;
+    text-align: center;
+}
+
+
+.content {
+    border-radius: 5px;
+    background-color: #7ddb82;
+    padding: 1%;
+    width: 50%;
+    margin: 25%;
+    margin-top: 7%;
+    display: flex;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=date],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    border: 1px solid #7e846b;
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    transition: 1s;
+}
+
+input:focus {
+    background-color: #9abcbc;
+}
+
+
+form{
+    display: block;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+
+.contacto-form input:required {
+    border-left: 5px solid palegreen;
+}
+
+.contacto-form input:invalid {
+    border-left: 5px solid salmon;
+}
+
+@media (max-width:600){
+    .content {
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1%;
+        width: 500px;
+        margin-left: 25%;
+        margin-top: 600px;
+        display: flex;
+    }
+}
+/*contacto fin*/
+
+
+/*Equipo Inicio*/
+
+.fila{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.equipo{
+    width: 100%;
+    text-align: center;
+    padding: 0 10%;
+}
+.columna{
+    flex-basis: 32%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.columna img{
+    width: 100%;
+    min-height: 60vh;
+    display: block;
+    overflow: hidden;
+}
+.layer2{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer2:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer2 p{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer2:hover p{
+    padding: 15%;
+    opacity: 1;
+}
+
+@media(max-width:600px){
+
+    .fila{
+        margin-top: 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    h1{
+        margin-bottom: 5%;
+    }
+    .columna{
+        margin-bottom: 5%;
+    }
+    .columna img{
+        min-height: 30vh;
+    }
+}
+/*Fin equipo*/
