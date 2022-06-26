@@ -23,7 +23,7 @@ Hemos usado una plantilla que fue eligida por el grupo.
    * Nuria Palomo
    * Valentina Marta
    * Erika Garcia
-   * Alex Zambrano
+   * Alexandra Zambrano
    * Sonia
    * Christina Paucar
 ​
